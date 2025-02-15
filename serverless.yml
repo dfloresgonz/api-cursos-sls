@@ -9,6 +9,11 @@ provider:
   iam:
     role: arn:aws:iam::321787585501:role/LabRole
 
+package:
+  individually: true
+  patterns:
+    - '!**/*.py'
+    
 functions:
   listar:
     handler: ListarCursos.lambda_handler
