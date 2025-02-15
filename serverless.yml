@@ -13,10 +13,9 @@ functions:
   listar:
     handler: ListarCursos.lambda_handler
     package:
-      exclude:
-        - "**"
-      include:
-        - ListarCursos.py
+      patterns:
+        - '!**/*.py'        # First exclude all Python files
+        - 'ListarCursos.py'
     events:
       - http:
           path: /cursos/listar
@@ -26,10 +25,9 @@ functions:
   buscar:
     handler: BuscarCurso.lambda_handler
     package:
-      exclude:
-        - "**"
-      include:
-        - BuscarCurso.py
+      patterns:
+        - '!**/*.py'      # First exclude all Python files
+        - 'BuscarCurso.py'
     events:
       - http:
           path: /cursos/buscar
@@ -39,10 +37,9 @@ functions:
   crear:
     handler: CrearCurso.lambda_handler
     package:
-      exclude:
-        - "**"
-      include:
-        - CrearCurso.py
+      patterns:
+        - '!**/*.py'      # First exclude all Python files
+        - 'CrearCurso.py'
     events:
       - http:
           path: /cursos/crear
@@ -52,10 +49,9 @@ functions:
   modificar:
     handler: ModificarCurso.lambda_handler
     package:
-      exclude:
-        - "**"
-      include:
-        - ModificarCurso.py
+      patterns:
+        - '!**/*.py'          # First exclude all Python files
+        - 'ModificarCurso.py'
     events:
       - http:
           path: /cursos/modificar
@@ -65,10 +61,9 @@ functions:
   eliminar:
     handler: EliminarCurso.lambda_handler
     package:
-      exclude:
-        - "**"
-      include:
-        - EliminarCurso.py
+      patterns:
+        - '!**/*.py'         # First exclude all Python files
+        - 'EliminarCurso.py'
     events:
       - http:
           path: /cursos/eliminar
