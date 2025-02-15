@@ -9,14 +9,12 @@ provider:
   iam:
     role: arn:aws:iam::321787585501:role/LabRole
 
-package:
-  exclude:
-    - "**/*.py"
-
 functions:
   listar:
     handler: ListarCursos.lambda_handler
     package:
+      exclude:
+        - "**"
       include:
         - ListarCursos.py
     events:
@@ -28,6 +26,8 @@ functions:
   buscar:
     handler: BuscarCurso.lambda_handler
     package:
+      exclude:
+        - "**"
       include:
         - BuscarCurso.py
     events:
@@ -39,6 +39,8 @@ functions:
   crear:
     handler: CrearCurso.lambda_handler
     package:
+      exclude:
+        - "**"
       include:
         - CrearCurso.py
     events:
@@ -50,6 +52,8 @@ functions:
   modificar:
     handler: ModificarCurso.lambda_handler
     package:
+      exclude:
+        - "**"
       include:
         - ModificarCurso.py
     events:
@@ -61,6 +65,8 @@ functions:
   eliminar:
     handler: EliminarCurso.lambda_handler
     package:
+      exclude:
+        - "**"
       include:
         - EliminarCurso.py
     events:
