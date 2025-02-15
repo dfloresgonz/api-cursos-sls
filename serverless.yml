@@ -13,13 +13,13 @@ package:
   individually: true
   patterns:
     - '!**/*.py'
-    
+
 functions:
   listar:
     handler: ListarCursos.lambda_handler
     package:
       patterns:
-        - '!**/*.py'        # First exclude all Python files
+        - '!**/*.py'
         - 'ListarCursos.py'
     events:
       - http:
@@ -31,7 +31,7 @@ functions:
     handler: BuscarCurso.lambda_handler
     package:
       patterns:
-        - '!**/*.py'      # First exclude all Python files
+        - '!**/*.py'
         - 'BuscarCurso.py'
     events:
       - http:
@@ -43,7 +43,7 @@ functions:
     handler: CrearCurso.lambda_handler
     package:
       patterns:
-        - '!**/*.py'      # First exclude all Python files
+        - '!**/*.py'
         - 'CrearCurso.py'
     events:
       - http:
@@ -55,7 +55,7 @@ functions:
     handler: ModificarCurso.lambda_handler
     package:
       patterns:
-        - '!**/*.py'          # First exclude all Python files
+        - '!**/*.py'
         - 'ModificarCurso.py'
     events:
       - http:
@@ -67,7 +67,7 @@ functions:
     handler: EliminarCurso.lambda_handler
     package:
       patterns:
-        - '!**/*.py'         # First exclude all Python files
+        - '!**/*.py'
         - 'EliminarCurso.py'
     events:
       - http:
